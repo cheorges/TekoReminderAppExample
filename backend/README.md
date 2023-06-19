@@ -61,6 +61,6 @@ curl --location --request DELETE 'localhost:8080/api/reminder/1' \
 ## Dockerized
 
 ```shell
-docker build -t reminder-app .
-docker run -p 8080:8080 -it -d --rm --name reminders reminder-app
+docker build -t reminder-backend .
+docker run -p 8080:8080 -it -d --rm --name reminder-backend reminder-backend
 ```
