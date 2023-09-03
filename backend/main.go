@@ -1,6 +1,8 @@
 package main
 
-import "reminders/pkg/controller"
+import (
+	"reminders/pkg/controller"
+)
 
 func main() {
 	handler := controller.New()

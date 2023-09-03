@@ -5,6 +5,14 @@
 ```shell
 go get github.com/gin-gonic/gin
 go get github.com/gin-contrib/cors
+go get github.com/lib/pq
+```
+
+## Persistence DB
+
+```shell
+docker run -d --name reminder-db -p 5432:5432 -e POSTGRES_DB=reminder -e POSTGRES_PASSWORD=secret -e POSTGRES_USER=postgres postgres
+# docker run -d --name reminder-db -p 5432:5432 -v path-to-local-folder:/var/lib/postgresql/data -e POSTGRES_DB=reminder -e POSTGRES_PASSWORD=secret -e POSTGRES_USER=postgres postgres
 ```
 
 ## Endpoints

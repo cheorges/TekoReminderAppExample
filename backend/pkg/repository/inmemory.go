@@ -11,7 +11,7 @@ type InMemoryStorageImpl struct {
 	reminders *[]model.Reminder
 }
 
-func New() *InMemoryStorageImpl {
+func NewInMemoryStorageImpl() *InMemoryStorageImpl {
 	nextId = 1
 	reminders := make([]model.Reminder, 0)
 	return &InMemoryStorageImpl{reminders: &reminders}

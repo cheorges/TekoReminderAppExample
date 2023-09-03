@@ -9,13 +9,13 @@ import (
 
 type Handler struct {
 	engine     *gin.Engine
-	repository *repository.InMemoryStorageImpl
+	repository *repository.PostgresqlStorageImpl
 }
 
 func New() *Handler {
 	h := &Handler{
 		engine:     gin.Default(),
-		repository: repository.New(),
+		repository: repository.NewPostgresStorageImpl(),
 	}
 
 	configureCors(h.engine)
